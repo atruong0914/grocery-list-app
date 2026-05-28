@@ -7,7 +7,7 @@ function App() {
   const [screen, setScreen] = useState("welcome");
 
   // track which theme user picked, default "light"
-  const[theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("");
 
   return (
     <div className={`app theme-${theme}`}>

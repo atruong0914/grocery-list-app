@@ -50,10 +50,12 @@ function ThemeSelect({ selectedTheme, onSelectTheme, onContinue }) {
                     )
             })}
         </section>
-        
-        <button type="button" onClick={onContinue}>
+        {/*if theme isnt selected, disable the button to cont. */}
+        <button type="button" onClick={onContinue} disabled={!selectedTheme}>
             Continue
         </button>
         </main>
     );
 }
+
+export default ThemeSelect
