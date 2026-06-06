@@ -47,3 +47,34 @@ function Home() {
     function deleteItem(itemDelete) {
         setItems(items.filter((item) => item != itemDelete));
     }
+
+    return (
+        <main className="home-page">
+            <h1>Grocery List</h1>
+
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={itemInput}
+                    onChange={(event) => setItemInput(event.target.value)}
+                    placeholder="Add an item"
+                />
+
+                <button type="submit">Add</button>
+            </form>
+            {/* error message? yes then display. no then render nothing*/}
+            {error && <p>{error}</p>}
+
+            <ul>
+                {/* loop over the items arr, return a list for each item*/}
+                {items.map((item) => (
+                    <li key={item}>
+                        {item}
+                        <button type="button" onClick={() => deleteItem(item)}>
+                            Delete
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </main>
+    )
