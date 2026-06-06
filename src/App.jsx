@@ -25,10 +25,7 @@ function App() {
       )}
       {/* if screen is home, show home page */}
       {screen === "home" && (
-        <main className="page">
-          <h1>Grocery List: </h1>
-          <p>Your grocery list goes here!</p>
-        </main>
+        <Home />
       )}
     </div>
   );
