@@ -22,6 +22,15 @@ function Home() {
             return;
         };
 
+        // check if existing item matches new item input, ignore Case
+        const duplicate = items.some(
+            (item) => item.toLowerCase() === newItem.toLowerCase()
+        );
+
+        // if the item is duplicate, give error
+        if (duplicate) {
+            setError("That item is already on your list!");
+        };
 
 
 }
