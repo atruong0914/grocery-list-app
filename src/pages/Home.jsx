@@ -15,7 +15,7 @@ function Home() {
 
         // remove whitespace start & end from what user inputs
         const newItem = itemInput.trim()
-    }
+    
         // if user doesn't enter item, give error
         if (newItem === "")  {
             setError("Please enter an item.");
@@ -78,5 +78,6 @@ function Home() {
             </ul>
         </main>
     )
+}
 
 export default Home;
