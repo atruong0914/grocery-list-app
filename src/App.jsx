@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Welcome from "./pages/Welcome";
 import ThemeSelect from "./pages/ThemeSelect";
+import Home from "./pages/Home";
 
 function App() {
   // track which screen is showing, default  "welcome"

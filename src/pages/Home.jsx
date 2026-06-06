@@ -78,3 +78,5 @@ function Home() {
             </ul>
         </main>
     )
+
+export default Home;
