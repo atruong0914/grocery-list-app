@@ -30,7 +30,20 @@ function Home() {
         // if the item is duplicate, give error
         if (duplicate) {
             setError("That item is already on your list!");
+            return;
         };
 
-
+        // add new items to the list
+        // spread ...items operator copies all existing items -> new arr -> new item at the end
+        setItems([...items, newItem]);
+        // clear the item input field
+        setItemInput("");
+        // clear prev error message 
+        setError("");
 }
+    // filter through the items
+    // if the item doesnt match the items deleted
+    // filter returns a new arr with items not deleted
+    function deleteItem(itemDelete) {
+        setItems(items.filter((item) => item != itemDelete));
+    }
